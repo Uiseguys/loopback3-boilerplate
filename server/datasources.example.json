@@ -1,0 +1,35 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mydb": {
+    "name": "mydb",
+    "connector": "postgresql",
+    "host": "localhost",
+    "port": 5432,
+    "database": "i18next",
+    "user": "postgres",
+    "debug": true,
+    "password": "root"
+  },
+  "myEmail": {
+    "name": "myEmail",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "email.active24.com",
+        "secure": false,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "port": 587,
+        "auth": {
+          "user": "cesko@gastro-booking.com",
+          "pass": "n6EEUd5xCJ"
+        }
+      }
+    ]
+  }
+}

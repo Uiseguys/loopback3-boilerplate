@@ -1,0 +1,43 @@
+{
+  "name": "Log",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "hostname": {
+      "type": "string",
+      "length": 100
+    },
+    "url": {
+      "type": "string",
+      "length": 1000
+    },
+    "APIResponseTime": {
+      "type": "string",
+      "length": 65535,
+      "mysql": {
+        "dataType": "text",
+        "dataLength": 65535
+      }
+    },
+    "OverallResponseTime": {
+      "type": "number",
+      "dataType": "float"
+    },
+    "msg": {
+      "type": "string",
+      "length": 65535,
+      "mysql": {
+        "dataType": "text",
+        "dataLength": 65535
+      }
+    },
+    "time": {
+      "type": "date"
+    }
+  },
+  "relations": {},
+  "acls": []
+}
