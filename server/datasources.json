@@ -14,7 +14,10 @@
     "user": "mpmnrsykqnupsh",
     "password":
       "f4b493b38474c78bece1f11488dbace6cf769d5be51bf35aaaf411ddc3fe18e1",
-    "debug": true
+    "min": 5,
+    "max": 200,
+    "idleTimeoutMillis": 60000,
+    "ssl": false
   },
   "myEmail": {
     "name": "myEmail",
