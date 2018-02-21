@@ -5,9 +5,12 @@
   },
   "mydb": {
     "name": "mydb",
-    "connector": "postgresql",
-    "url": "${DATABASE_URL}",
-    "ssl": true
+    "connector": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "database": "loopback3",
+    "user": "root",
+    "password": ""
   },
   "myEmail": {
     "name": "myEmail",

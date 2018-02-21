@@ -21,7 +21,6 @@ var logger = require('loopback-component-logger')(rootLogger);
 
 app.start = function() {
   // start the web server
-  console.log(process.env.NODE_ENV);
   app.use(
     errorHandler({
       debug: app.get('env') === 'development',
