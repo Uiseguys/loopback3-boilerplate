@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "engines": {
-    "node": ">=4"
+    "node": "latest"
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "cross-env NODE_ENV=product node server/server.js",
+    "start": "cross-env NODE_ENV=product slc run",
     "dev": "node .",
     "db": "node server/server.js autoupdate",
     "productDB": "cross-env NODE_ENV=product node server/server.js autoupdate",
