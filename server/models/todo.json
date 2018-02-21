@@ -1,0 +1,42 @@
+{
+  "name": "Todo",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "length": 200
+    },
+    "description": {
+      "type": "string",
+      "length": 65535,
+      "mysql": {
+        "dataType": "text",
+        "dataLength": 65535
+      }
+    },
+    "tags": {
+      "type": "string",
+      "length": 500
+    },
+    "dateCreated": {
+      "type": "date"
+    },
+    "dueDate": {
+      "type": "date"
+    },
+    "priority": {
+      "type": "number",
+      "dataType": "integer"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "hidden": [],
+  "methods": {}
+}

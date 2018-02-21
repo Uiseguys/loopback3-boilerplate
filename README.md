@@ -99,4 +99,4 @@ Edit **server/config.json**
 
 ## How to update?
 
-Edit models and run `$ npm db autoupdate`
+Edit models and run `$ npm run db autoupdate`

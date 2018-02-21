@@ -47,6 +47,10 @@
     "dataSource": "mydb",
     "public": true
   },
+  "Todo": {
+    "dataSource": "mydb",
+    "public": true
+  },
   "Email": {
     "dataSource": "myEmail"
   }
