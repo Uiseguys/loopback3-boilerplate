@@ -1,0 +1,38 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mydb": {
+    "name": "mydb",
+    "connector": "postgresql",
+    "host": "ec2-54-235-146-184.compute-1.amazonaws.com",
+    "port": 5432,
+    "database": "d4g739uh1c1kvk",
+    "url":
+      "postgres://mpmnrsykqnupsh:f4b493b38474c78bece1f11488dbace6cf769d5be51bf35aaaf411ddc3fe18e1@ec2-54-235-146-184.compute-1.amazonaws.com:5432/d4g739uh1c1kvk",
+    "user": "mpmnrsykqnupsh",
+    "password":
+      "f4b493b38474c78bece1f11488dbace6cf769d5be51bf35aaaf411ddc3fe18e1",
+    "debug": true
+  },
+  "myEmail": {
+    "name": "myEmail",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "email.active24.com",
+        "secure": false,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "port": 587,
+        "auth": {
+          "user": "cesko@gastro-booking.com",
+          "pass": "n6EEUd5xCJ"
+        }
+      }
+    ]
+  }
+}
