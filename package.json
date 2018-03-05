@@ -16,6 +16,7 @@
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
+    "carbone": "^1.1.0",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "cross-env": "^5.1.3",

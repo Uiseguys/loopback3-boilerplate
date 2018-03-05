@@ -13,5 +13,6 @@ module.exports = function(server) {
     );
     res.send(contents);
   });
+
   server.use(router);
 };

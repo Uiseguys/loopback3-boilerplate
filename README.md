@@ -8,6 +8,7 @@ loopback3-boilerplate provides the following features:
 * Rights and Roles
 * A User Settings
 * Logging/Statistics
+* Templates
 
 ## How to start
 
@@ -100,3 +101,36 @@ Edit **server/config.json**
 ## How to update?
 
 Edit models and run `$ npm run db autoupdate`
+
+## Features
+
+### Template
+
+This feature is based on [carbone](https://github.com/Ideolys/carbone).
+
+* Uploading template
+
+      		url: api/Templates
+      		method: GET
+
+* Downloading template
+
+      	    url: api/Templates/:templateId
+      	    method: POST
+      	    params:
+      	    {
+      		    data: {
+      			    firstname: 'Test',
+      			    lastname: 'Test',
+      		    }
+      		    options: {
+      			    convertTo: 'pdf'
+      			}
+      		}
+
+* Delete template
+
+      		url: api/Templates/:templateId
+      		method: DELETE
+
+
