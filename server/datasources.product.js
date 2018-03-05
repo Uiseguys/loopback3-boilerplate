@@ -29,4 +29,11 @@ module.exports = {
       },
     ],
   },
+  storage: {
+    name: 'storage',
+    connector: 'loopback-component-storage',
+    provider: 'filesystem',
+    nameConflict: 'makeUnique',
+    root: './server/storage',
+  },
 };

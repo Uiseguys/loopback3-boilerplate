@@ -51,7 +51,14 @@
     "dataSource": "mydb",
     "public": true
   },
+  "Template": {
+    "dataSource": "mydb"
+  },
   "Email": {
     "dataSource": "myEmail"
+  },
+  "File": {
+    "dataSource": "storage",
+    "public": false
   }
 }
