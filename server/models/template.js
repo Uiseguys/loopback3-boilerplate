@@ -38,7 +38,7 @@ module.exports = Template => {
       if (!template) {
         return cb('Not found', 404);
       }
-      const {data} = body;
+      const data = body || {};
       const options = {
         convertTo: 'pdf',
       };
@@ -46,7 +46,7 @@ module.exports = Template => {
       const carbone = require('carbone');
       carbone.render(
         path.resolve(__dirname, `../storage/templates/${template.name}`),
-        data || {},
+        data,
         options,
         function(err, result) {
           if (err) cb(err);
