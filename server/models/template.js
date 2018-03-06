@@ -38,14 +38,15 @@ module.exports = Template => {
       if (!template) {
         return cb('Not found', 404);
       }
-      let {data, options} = body;
-      data = data || {};
-      options = options || {};
+      const {data} = body;
+      const options = {
+        convertTo: 'pdf',
+      };
 
       const carbone = require('carbone');
       carbone.render(
         path.resolve(__dirname, `../storage/templates/${template.name}`),
-        data,
+        data || {},
         options,
         function(err, result) {
           if (err) cb(err);
