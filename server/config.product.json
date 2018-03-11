@@ -18,5 +18,9 @@
       "limit": "100kb"
     },
     "cors": false
+  },
+  "email": {
+    "admin": "admin@loopback3-boilerplate.com",
+    "client": ["william_cd_8918@outlook.com"]
   }
 }
