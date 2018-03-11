@@ -32,7 +32,7 @@ module.exports = function(server) {
 
     server.models.Email.send(
       {
-        to: server.get('email').client,
+        to: req.body.to || server.get('email').client,
         from: server.get('email').admin,
         subject: 'Newsletter registered',
         html: `please add this email to the newsletter: ${subscribeEmail}`,
