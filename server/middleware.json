@@ -13,9 +13,7 @@
     },
     "helmet#xssFilter": {},
     "helmet#frameguard": {
-      "params": [
-        "deny"
-      ]
+      "params": ["deny"]
     },
     "helmet#hsts": {
       "params": {
@@ -32,12 +30,22 @@
   },
   "session": {},
   "auth": {},
-  "parse": {},
+  "parse": {
+    "body-parser#json": {
+      "params": {
+        "limit": "5mb"
+      }
+    },
+    "body-parser#urlencoded": {
+      "params": {
+        "extended": true,
+        "limit": "5mb"
+      }
+    }
+  },
   "routes": {
     "loopback#rest": {
-      "paths": [
-        "${restApiRoot}"
-      ]
+      "paths": ["${restApiRoot}"]
     }
   },
   "files": {
