@@ -16,15 +16,15 @@ module.exports = {
     transports: [
       {
         type: 'smtp',
-        host: 'email.active24.com',
+        host: 'smtp.sendgrid.net',
         secure: false,
         tls: {
           rejectUnauthorized: false,
         },
         port: 587,
         auth: {
-          user: 'cesko@gastro-booking.com',
-          pass: 'n6EEUd5xCJ',
+          user: process.env.SENDGRID_USERNAME,
+          pass: process.env.SENDGRID_PASSWORD,
         },
       },
     ],
