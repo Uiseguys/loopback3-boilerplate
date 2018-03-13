@@ -54,10 +54,13 @@
   "Template": {
     "dataSource": "mydb"
   },
+  "AttachmentMeta": {
+    "dataSource": "mydb"
+  },
   "Email": {
     "dataSource": "myEmail"
   },
-  "File": {
+  "Attachment": {
     "dataSource": "storage",
     "public": false
   }

@@ -1,4 +1,5 @@
 'use strict';
+const container = 'templates';
 const path = require('path');
 const fs = require('fs');
 const helpers = require('./helpers.js');
@@ -7,8 +8,16 @@ module.exports = Template => {
   helpers.disableAllMethods(Template, ['find', 'create', 'deleteById']);
 
   Template.beforeRemote('create', (ctx, modelInstance, next) => {
-    const {File} = Template.app.models;
-    File.upload(ctx.req, ctx.res, {container: 'templates'}, (err, result) => {
+    const {Attachment} = Template.app.models;
+
+    Attachment.createContainer(
+      {
+        name: container,
+      },
+      () => {}
+    );
+
+    Attachment.upload(ctx.req, ctx.res, {container}, (err, result) => {
       if (err) {
         ctx.res.send(err);
       } else {
@@ -45,7 +54,7 @@ module.exports = Template => {
 
       const carbone = require('carbone');
       carbone.render(
-        path.resolve(__dirname, `../storage/templates/${template.name}`),
+        path.resolve(__dirname, `../storage/${container}/${template.name}`),
         data,
         options,
         function(err, result) {
