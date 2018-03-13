@@ -9,6 +9,7 @@ loopback3-boilerplate provides the following features:
 * A User Settings
 * Logging/Statistics
 * Templates
+* Emails
 
 ## How to start
 
@@ -133,4 +134,46 @@ This feature is based on [carbone](https://github.com/Ideolys/carbone).
       		url: api/Templates/:templateId
       		method: DELETE
 
+### Emails
 
+You must configure email server on server/datasources.json first.
+
+    "myEmail": {
+        "name": "myEmail",
+        "connector": "mail",
+        "transports": [
+          {
+            "type": "smtp",
+            "host": "email.active24.com",
+            "secure": false,
+            "tls": {
+              "rejectUnauthorized": false
+            },
+            "port": 587,
+            "auth": {
+              "user": "cesko@gastro-booking.com",
+              "pass": "n6EEUd5xCJ"
+            }
+          }
+        ]
+      }
+
+* Uploading template
+
+      		url: api/email
+      		method: POST
+
+* sending email
+
+      	    url: api/email/send
+      	    method: POST
+      	    params:
+      	    {
+      	      	    to: 'toaddress@example.com',
+      	      	    subject: 'subject',
+      	      	    template: 'templatefilename'
+      		    data: {
+      			    firstname: 'Test',
+      			    lastname: 'Test',
+      		    }
+      		}
