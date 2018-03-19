@@ -50,7 +50,7 @@ module.exports = function(app) {
   router.post('/send', (req, res) => {
     const loopback = require('loopback');
     const path = require('path');
-    const {to, from, subject, template, data} = req.body;
+    const {to, from, subject, template, data, cc, bcc} = req.body;
 
     app.set('view engine', 'ejs');
     const renderer = loopback.template(
@@ -58,12 +58,12 @@ module.exports = function(app) {
     );
     const htmlBody = renderer(data);
 
-    console.log(htmlBody);
-
     app.models.Email.send(
       {
         to,
         from: from || app.get('email').admin,
+        cc: cc || '',
+        bcc: bcc || '',
         subject,
         html: htmlBody,
       },
