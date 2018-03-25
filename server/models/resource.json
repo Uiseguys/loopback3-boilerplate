@@ -1,0 +1,41 @@
+{
+  "name": "Resource",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "resourceId": {
+      "type": "string",
+      "required": true,
+      "index": true,
+      "length": 200
+    },
+    "weblinkUrl": {
+      "type": "string",
+      "required": true,
+      "length": 400
+    },
+    "originalFilename": {
+      "type": "string",
+      "required": true,
+      "length": 200
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "length": 200
+    }
+  },
+  "relations": {
+    "guideline": {
+      "type": "belongsTo",
+      "model": "Guideline"
+    }
+  },
+  "validations": [],
+  "acls": [],
+  "methods": {},
+  "hidden": ["id", "guidelineId"]
+}

@@ -54,7 +54,7 @@
   "Template": {
     "dataSource": "mydb"
   },
-  "AttachmentMeta": {
+  "Resource": {
     "dataSource": "mydb"
   },
   "Email": {
